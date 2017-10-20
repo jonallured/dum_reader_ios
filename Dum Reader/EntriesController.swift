@@ -30,8 +30,14 @@ class EntriesController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Router.hit(.unreadEntries, handler: unreadEntriesHandler)
+
         tableView.delegate = self
         tableView.dataSource = self
+    }
+
+    private func unreadEntriesHandler(data: Data?, response: URLResponse?, error: Error?) {
+        print(data, response, error)
     }
 }
 

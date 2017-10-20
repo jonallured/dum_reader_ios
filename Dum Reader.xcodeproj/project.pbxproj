@@ -11,6 +11,9 @@
 		FC4CC9301F97D55F006E2957 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CC92F1F97D55F006E2957 /* EntryCell.swift */; };
 		FC4CC9321F97D9E9006E2957 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CC9311F97D9E9006E2957 /* Entry.swift */; };
 		FC4CC9341F97DA22006E2957 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CC9331F97DA22006E2957 /* Feed.swift */; };
+		FC51FC871F9A9B3500DBD58F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51FC861F9A9B3500DBD58F /* Endpoint.swift */; };
+		FC51FC891F9A9B3B00DBD58F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51FC881F9A9B3B00DBD58F /* Router.swift */; };
+		FC51FC8B1F9A9F3E00DBD58F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51FC8A1F9A9F3E00DBD58F /* Credentials.swift */; };
 		FCA2FED71F97B50400585C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FED61F97B50400585C25 /* AppDelegate.swift */; };
 		FCA2FED91F97B50400585C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FED81F97B50400585C25 /* ViewController.swift */; };
 		FCA2FEDC1F97B50400585C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA2FEDA1F97B50400585C25 /* Main.storyboard */; };
@@ -43,6 +46,9 @@
 		FC4CC92F1F97D55F006E2957 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		FC4CC9311F97D9E9006E2957 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		FC4CC9331F97DA22006E2957 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		FC51FC861F9A9B3500DBD58F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		FC51FC881F9A9B3B00DBD58F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FC51FC8A1F9A9F3E00DBD58F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		FCA2FED31F97B50400585C25 /* Dum Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dum Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA2FED61F97B50400585C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCA2FED81F97B50400585C25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC51FC851F9A9B2A00DBD58F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FC51FC861F9A9B3500DBD58F /* Endpoint.swift */,
+				FC51FC881F9A9B3B00DBD58F /* Router.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		FCA2FECA1F97B50400585C25 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +122,7 @@
 		FCA2FED51F97B50400585C25 /* Dum Reader */ = {
 			isa = PBXGroup;
 			children = (
+				FC51FC851F9A9B2A00DBD58F /* Networking */,
 				FCA2FED61F97B50400585C25 /* AppDelegate.swift */,
 				FCA2FED81F97B50400585C25 /* ViewController.swift */,
 				FCA2FEDA1F97B50400585C25 /* Main.storyboard */,
@@ -118,6 +134,7 @@
 				FC4CC92F1F97D55F006E2957 /* EntryCell.swift */,
 				FC4CC9311F97D9E9006E2957 /* Entry.swift */,
 				FC4CC9331F97DA22006E2957 /* Feed.swift */,
+				FC51FC8A1F9A9F3E00DBD58F /* Credentials.swift */,
 			);
 			path = "Dum Reader";
 			sourceTree = "<group>";
@@ -276,7 +293,10 @@
 			files = (
 				FC4CC9321F97D9E9006E2957 /* Entry.swift in Sources */,
 				FC4CC92E1F97D313006E2957 /* EntriesController.swift in Sources */,
+				FC51FC8B1F9A9F3E00DBD58F /* Credentials.swift in Sources */,
+				FC51FC871F9A9B3500DBD58F /* Endpoint.swift in Sources */,
 				FC4CC9301F97D55F006E2957 /* EntryCell.swift in Sources */,
+				FC51FC891F9A9B3B00DBD58F /* Router.swift in Sources */,
 				FC4CC9341F97DA22006E2957 /* Feed.swift in Sources */,
 				FCA2FED91F97B50400585C25 /* ViewController.swift in Sources */,
 				FCA2FF051F97B8B300585C25 /* WebViewController.swift in Sources */,
