@@ -1,7 +1,7 @@
 import Foundation
 
 enum Endpoint {
-    case entries
+    case entries(ids: [Int])
     case unreadEntries
     case starredEntries
     case recentlyReadEntries
@@ -16,8 +16,9 @@ enum Endpoint {
 
     var path: String {
         switch self {
-        case .entries:
-            return "/v2/entries.json"
+        case .entries(let ids):
+            let idList = ids.flatMap { String($0) }.joined(separator: "&")
+            return "/v2/entries.json?\(idList)"
         case .unreadEntries:
             return "/v2/unread_entries.json"
         case .starredEntries:

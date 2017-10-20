@@ -8,18 +8,18 @@ let feeds = [
 ]
 
 let entries: [Entry] = [
-    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
-    Entry(date: "10/17/17", feed: feeds[1], title: "A Blood Test Promised To Make Me A Better Runner, But It Just Made Me Worry I Pee Too Much", url: "https://fivethirtyeight.com/features/a-blood-test-promised-to-make-me-a-better-runner-but-it-just-made-me-worry-i-pee-too-much/"),
-    Entry(date: "10/17/17", feed: feeds[2], title: "Swift 4.1 Release Process", url: "https://swift.org/blog/swift-4-1-release-process/"),
-    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
-    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
-    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
-    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
-    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
-    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
-    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
-    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
-    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta")
+//    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
+//    Entry(date: "10/17/17", feed: feeds[1], title: "A Blood Test Promised To Make Me A Better Runner, But It Just Made Me Worry I Pee Too Much", url: "https://fivethirtyeight.com/features/a-blood-test-promised-to-make-me-a-better-runner-but-it-just-made-me-worry-i-pee-too-much/"),
+//    Entry(date: "10/17/17", feed: feeds[2], title: "Swift 4.1 Release Process", url: "https://swift.org/blog/swift-4-1-release-process/"),
+//    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
+//    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
+//    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
+//    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
+//    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
+//    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
+//    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
+//    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta"),
+//    Entry(date: "10/17/17", feed: feeds[0], title: "PostgreSQL 10 Now Available in Beta on Heroku Postgres", url: "https://blog.heroku.com/postgres-10-beta")
 ]
 
 class EntriesController: UIViewController {
@@ -37,7 +37,19 @@ class EntriesController: UIViewController {
     }
 
     private func unreadEntriesHandler(data: Data?, response: URLResponse?, error: Error?) {
-        print(data, response, error)
+        guard let data = data,
+            let entryIds = try? JSONDecoder().decode([Int].self, from: data)
+            else { fatalError() }
+
+        Router.hit(.entries(ids: entryIds), handler: entriesHandler)
+    }
+
+    private func entriesHandler(data: Data?, response: URLResponse?, error: Error?) {
+        guard let data = data,
+            let entries = try? JSONDecoder.apiDecoder().decode([Entry].self, from: data)
+            else { fatalError() }
+
+        print(entries)
     }
 }
 
@@ -70,5 +82,21 @@ extension EntriesController: UITableViewDataSource {
 extension EntriesController: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         controller.dismiss(animated: true, completion: nil)
+    }
+}
+
+private extension DateFormatter {
+    class func apiDateFormatter() -> DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        return formatter
+    }
+}
+
+private extension JSONDecoder {
+    class func apiDecoder() -> JSONDecoder {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.apiDateFormatter())
+        return decoder
     }
 }

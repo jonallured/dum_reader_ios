@@ -7,7 +7,7 @@ class EntryCell: UITableViewCell {
 
     var entry: Entry? {
         didSet {
-            feedTitleLabel.text = entry?.feed.name
+            feedTitleLabel.text = entry?.feedName
             entryTitleLabel.text = entry?.title
             entryDateLabel.text = entry?.date
         }
