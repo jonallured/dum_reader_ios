@@ -1,4 +1,5 @@
 import UIKit
+import SafariServices
 
 let feeds = [
     Feed(name: "Heroku"),
@@ -35,7 +36,16 @@ class EntriesController: UIViewController {
 }
 
 extension EntriesController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let entry = entries[indexPath.row]
 
+        let url = URL(string: entry.url)!
+        let configuration = SFSafariViewController.Configuration()
+        configuration.entersReaderIfAvailable = true
+        let svc = SFSafariViewController(url: url, configuration: configuration)
+        svc.delegate = self
+        self.present(svc, animated: true, completion: nil)
+    }
 }
 
 extension EntriesController: UITableViewDataSource {
@@ -48,5 +58,11 @@ extension EntriesController: UITableViewDataSource {
         let entry = entries[indexPath.row]
         cell.entry = entry
         return cell
+    }
+}
+
+extension EntriesController: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }
