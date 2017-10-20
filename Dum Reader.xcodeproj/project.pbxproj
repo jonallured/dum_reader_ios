@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC4CC92E1F97D313006E2957 /* EntriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CC92D1F97D313006E2957 /* EntriesController.swift */; };
+		FC4CC9301F97D55F006E2957 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CC92F1F97D55F006E2957 /* EntryCell.swift */; };
+		FC4CC9321F97D9E9006E2957 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CC9311F97D9E9006E2957 /* Entry.swift */; };
+		FC4CC9341F97DA22006E2957 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CC9331F97DA22006E2957 /* Feed.swift */; };
+		FCA2FED71F97B50400585C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FED61F97B50400585C25 /* AppDelegate.swift */; };
+		FCA2FED91F97B50400585C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FED81F97B50400585C25 /* ViewController.swift */; };
+		FCA2FEDC1F97B50400585C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA2FEDA1F97B50400585C25 /* Main.storyboard */; };
+		FCA2FEDE1F97B50400585C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA2FEDD1F97B50400585C25 /* Assets.xcassets */; };
+		FCA2FEE11F97B50400585C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA2FEDF1F97B50400585C25 /* LaunchScreen.storyboard */; };
+		FCA2FEEC1F97B50400585C25 /* Dum_ReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FEEB1F97B50400585C25 /* Dum_ReaderTests.swift */; };
+		FCA2FEF71F97B50400585C25 /* Dum_ReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FEF61F97B50400585C25 /* Dum_ReaderUITests.swift */; };
+		FCA2FF051F97B8B300585C25 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FF041F97B8B300585C25 /* WebViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCA2FEE81F97B50400585C25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCA2FECB1F97B50400585C25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCA2FED21F97B50400585C25;
+			remoteInfo = "Dum Reader";
+		};
+		FCA2FEF31F97B50400585C25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCA2FECB1F97B50400585C25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCA2FED21F97B50400585C25;
+			remoteInfo = "Dum Reader";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC4CC92D1F97D313006E2957 /* EntriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesController.swift; sourceTree = "<group>"; };
+		FC4CC92F1F97D55F006E2957 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
+		FC4CC9311F97D9E9006E2957 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		FC4CC9331F97DA22006E2957 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		FCA2FED31F97B50400585C25 /* Dum Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dum Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCA2FED61F97B50400585C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCA2FED81F97B50400585C25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCA2FEDB1F97B50400585C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCA2FEDD1F97B50400585C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCA2FEE01F97B50400585C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCA2FEE21F97B50400585C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCA2FEE71F97B50400585C25 /* Dum ReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dum ReaderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCA2FEEB1F97B50400585C25 /* Dum_ReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dum_ReaderTests.swift; sourceTree = "<group>"; };
+		FCA2FEED1F97B50400585C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCA2FEF21F97B50400585C25 /* Dum ReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dum ReaderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCA2FEF61F97B50400585C25 /* Dum_ReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dum_ReaderUITests.swift; sourceTree = "<group>"; };
+		FCA2FEF81F97B50400585C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCA2FF041F97B8B300585C25 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCA2FED01F97B50400585C25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCA2FEE41F97B50400585C25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCA2FEEF1F97B50400585C25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCA2FECA1F97B50400585C25 = {
+			isa = PBXGroup;
+			children = (
+				FCA2FED51F97B50400585C25 /* Dum Reader */,
+				FCA2FEEA1F97B50400585C25 /* Dum ReaderTests */,
+				FCA2FEF51F97B50400585C25 /* Dum ReaderUITests */,
+				FCA2FED41F97B50400585C25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCA2FED41F97B50400585C25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCA2FED31F97B50400585C25 /* Dum Reader.app */,
+				FCA2FEE71F97B50400585C25 /* Dum ReaderTests.xctest */,
+				FCA2FEF21F97B50400585C25 /* Dum ReaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCA2FED51F97B50400585C25 /* Dum Reader */ = {
+			isa = PBXGroup;
+			children = (
+				FCA2FED61F97B50400585C25 /* AppDelegate.swift */,
+				FCA2FED81F97B50400585C25 /* ViewController.swift */,
+				FCA2FEDA1F97B50400585C25 /* Main.storyboard */,
+				FCA2FEDD1F97B50400585C25 /* Assets.xcassets */,
+				FCA2FEDF1F97B50400585C25 /* LaunchScreen.storyboard */,
+				FCA2FEE21F97B50400585C25 /* Info.plist */,
+				FCA2FF041F97B8B300585C25 /* WebViewController.swift */,
+				FC4CC92D1F97D313006E2957 /* EntriesController.swift */,
+				FC4CC92F1F97D55F006E2957 /* EntryCell.swift */,
+				FC4CC9311F97D9E9006E2957 /* Entry.swift */,
+				FC4CC9331F97DA22006E2957 /* Feed.swift */,
+			);
+			path = "Dum Reader";
+			sourceTree = "<group>";
+		};
+		FCA2FEEA1F97B50400585C25 /* Dum ReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCA2FEEB1F97B50400585C25 /* Dum_ReaderTests.swift */,
+				FCA2FEED1F97B50400585C25 /* Info.plist */,
+			);
+			path = "Dum ReaderTests";
+			sourceTree = "<group>";
+		};
+		FCA2FEF51F97B50400585C25 /* Dum ReaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FCA2FEF61F97B50400585C25 /* Dum_ReaderUITests.swift */,
+				FCA2FEF81F97B50400585C25 /* Info.plist */,
+			);
+			path = "Dum ReaderUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCA2FED21F97B50400585C25 /* Dum Reader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCA2FEFB1F97B50400585C25 /* Build configuration list for PBXNativeTarget "Dum Reader" */;
+			buildPhases = (
+				FCA2FECF1F97B50400585C25 /* Sources */,
+				FCA2FED01F97B50400585C25 /* Frameworks */,
+				FCA2FED11F97B50400585C25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dum Reader";
+			productName = "Dum Reader";
+			productReference = FCA2FED31F97B50400585C25 /* Dum Reader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCA2FEE61F97B50400585C25 /* Dum ReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCA2FEFE1F97B50400585C25 /* Build configuration list for PBXNativeTarget "Dum ReaderTests" */;
+			buildPhases = (
+				FCA2FEE31F97B50400585C25 /* Sources */,
+				FCA2FEE41F97B50400585C25 /* Frameworks */,
+				FCA2FEE51F97B50400585C25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCA2FEE91F97B50400585C25 /* PBXTargetDependency */,
+			);
+			name = "Dum ReaderTests";
+			productName = "Dum ReaderTests";
+			productReference = FCA2FEE71F97B50400585C25 /* Dum ReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FCA2FEF11F97B50400585C25 /* Dum ReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCA2FF011F97B50400585C25 /* Build configuration list for PBXNativeTarget "Dum ReaderUITests" */;
+			buildPhases = (
+				FCA2FEEE1F97B50400585C25 /* Sources */,
+				FCA2FEEF1F97B50400585C25 /* Frameworks */,
+				FCA2FEF01F97B50400585C25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCA2FEF41F97B50400585C25 /* PBXTargetDependency */,
+			);
+			name = "Dum ReaderUITests";
+			productName = "Dum ReaderUITests";
+			productReference = FCA2FEF21F97B50400585C25 /* Dum ReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCA2FECB1F97B50400585C25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Jonathan Allured";
+				TargetAttributes = {
+					FCA2FED21F97B50400585C25 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					FCA2FEE61F97B50400585C25 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FCA2FED21F97B50400585C25;
+					};
+					FCA2FEF11F97B50400585C25 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FCA2FED21F97B50400585C25;
+					};
+				};
+			};
+			buildConfigurationList = FCA2FECE1F97B50400585C25 /* Build configuration list for PBXProject "Dum Reader" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCA2FECA1F97B50400585C25;
+			productRefGroup = FCA2FED41F97B50400585C25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCA2FED21F97B50400585C25 /* Dum Reader */,
+				FCA2FEE61F97B50400585C25 /* Dum ReaderTests */,
+				FCA2FEF11F97B50400585C25 /* Dum ReaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCA2FED11F97B50400585C25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCA2FEE11F97B50400585C25 /* LaunchScreen.storyboard in Resources */,
+				FCA2FEDE1F97B50400585C25 /* Assets.xcassets in Resources */,
+				FCA2FEDC1F97B50400585C25 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCA2FEE51F97B50400585C25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCA2FEF01F97B50400585C25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCA2FECF1F97B50400585C25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC4CC9321F97D9E9006E2957 /* Entry.swift in Sources */,
+				FC4CC92E1F97D313006E2957 /* EntriesController.swift in Sources */,
+				FC4CC9301F97D55F006E2957 /* EntryCell.swift in Sources */,
+				FC4CC9341F97DA22006E2957 /* Feed.swift in Sources */,
+				FCA2FED91F97B50400585C25 /* ViewController.swift in Sources */,
+				FCA2FF051F97B8B300585C25 /* WebViewController.swift in Sources */,
+				FCA2FED71F97B50400585C25 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCA2FEE31F97B50400585C25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCA2FEEC1F97B50400585C25 /* Dum_ReaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCA2FEEE1F97B50400585C25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCA2FEF71F97B50400585C25 /* Dum_ReaderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCA2FEE91F97B50400585C25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCA2FED21F97B50400585C25 /* Dum Reader */;
+			targetProxy = FCA2FEE81F97B50400585C25 /* PBXContainerItemProxy */;
+		};
+		FCA2FEF41F97B50400585C25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCA2FED21F97B50400585C25 /* Dum Reader */;
+			targetProxy = FCA2FEF31F97B50400585C25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FCA2FEDA1F97B50400585C25 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCA2FEDB1F97B50400585C25 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCA2FEDF1F97B50400585C25 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCA2FEE01F97B50400585C25 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCA2FEF91F97B50400585C25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCA2FEFA1F97B50400585C25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCA2FEFC1F97B50400585C25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F5YW995L7;
+				INFOPLIST_FILE = "Dum Reader/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonallured.dum-reader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCA2FEFD1F97B50400585C25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F5YW995L7;
+				INFOPLIST_FILE = "Dum Reader/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonallured.dum-reader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FCA2FEFF1F97B50400585C25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F5YW995L7;
+				INFOPLIST_FILE = "Dum ReaderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonallured.Dum-ReaderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dum Reader.app/Dum Reader";
+			};
+			name = Debug;
+		};
+		FCA2FF001F97B50400585C25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F5YW995L7;
+				INFOPLIST_FILE = "Dum ReaderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonallured.Dum-ReaderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dum Reader.app/Dum Reader";
+			};
+			name = Release;
+		};
+		FCA2FF021F97B50400585C25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F5YW995L7;
+				INFOPLIST_FILE = "Dum ReaderUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonallured.Dum-ReaderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dum Reader";
+			};
+			name = Debug;
+		};
+		FCA2FF031F97B50400585C25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F5YW995L7;
+				INFOPLIST_FILE = "Dum ReaderUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonallured.Dum-ReaderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dum Reader";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCA2FECE1F97B50400585C25 /* Build configuration list for PBXProject "Dum Reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCA2FEF91F97B50400585C25 /* Debug */,
+				FCA2FEFA1F97B50400585C25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCA2FEFB1F97B50400585C25 /* Build configuration list for PBXNativeTarget "Dum Reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCA2FEFC1F97B50400585C25 /* Debug */,
+				FCA2FEFD1F97B50400585C25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCA2FEFE1F97B50400585C25 /* Build configuration list for PBXNativeTarget "Dum ReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCA2FEFF1F97B50400585C25 /* Debug */,
+				FCA2FF001F97B50400585C25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCA2FF011F97B50400585C25 /* Build configuration list for PBXNativeTarget "Dum ReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCA2FF021F97B50400585C25 /* Debug */,
+				FCA2FF031F97B50400585C25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCA2FECB1F97B50400585C25 /* Project object */;
+}
