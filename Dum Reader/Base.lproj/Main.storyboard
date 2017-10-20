@@ -17,14 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="joT-Lr-I7p">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="aHI-bL-pZJ"/>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SMH-4K-R2t">
-                                <rect key="frame" x="0.0" y="44" width="375" height="573"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Entry" id="9JT-xW-Lhc" customClass="EntryCell" customModule="Dum_Reader" customModuleProvider="target">
@@ -96,20 +90,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4qe-iG-Stc" secondAttribute="bottom" id="30f-CB-BUY"/>
-                            <constraint firstItem="joT-Lr-I7p" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4PA-zK-k6N"/>
-                            <constraint firstItem="joT-Lr-I7p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EoL-sM-Exc"/>
-                            <constraint firstItem="SMH-4K-R2t" firstAttribute="top" secondItem="joT-Lr-I7p" secondAttribute="bottom" id="J9t-2A-kZB"/>
+                            <constraint firstItem="SMH-4K-R2t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9Tr-PZ-z6d"/>
                             <constraint firstItem="4qe-iG-Stc" firstAttribute="top" secondItem="SMH-4K-R2t" secondAttribute="bottom" id="LVQ-nN-KH1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4qe-iG-Stc" secondAttribute="trailing" id="ZRS-ES-mVc"/>
                             <constraint firstAttribute="trailing" secondItem="SMH-4K-R2t" secondAttribute="trailing" id="aRq-hO-9OG"/>
                             <constraint firstItem="SMH-4K-R2t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="apD-3W-22o"/>
-                            <constraint firstAttribute="trailing" secondItem="joT-Lr-I7p" secondAttribute="trailing" id="dty-Q2-M29"/>
                             <constraint firstItem="4qe-iG-Stc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hUc-oE-66q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="navBar" destination="joT-Lr-I7p" id="yTk-Ok-tP4"/>
                         <outlet property="segmentControl" destination="TdY-jW-XN5" id="EFM-a9-bDr"/>
                         <outlet property="tableView" destination="SMH-4K-R2t" id="geM-aj-02P"/>
                     </connections>
