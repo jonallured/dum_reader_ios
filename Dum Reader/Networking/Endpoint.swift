@@ -17,8 +17,8 @@ enum Endpoint {
     var path: String {
         switch self {
         case .entries(let ids):
-            let idList = ids.flatMap { String($0) }.joined(separator: "&")
-            return "/v2/entries.json?\(idList)"
+            let idList = ids.flatMap { String($0) }.joined(separator: ",")
+            return "/v2/entries.json?ids=\(idList)"
         case .unreadEntries:
             return "/v2/unread_entries.json"
         case .starredEntries:
