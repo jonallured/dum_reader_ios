@@ -9,8 +9,18 @@ class EntryStore {
 
     var delegate: EntryStoreDelegate?
     var entries = [Entry]()
+    var feeds = [Feed]()
 
     func load() {
+        Router.hit(.subscriptions, handler: subscriptionsHandler)
+    }
+
+    private func subscriptionsHandler(data: Data?, response: URLResponse?, error: Error?) {
+        guard let data = data,
+            let feeds = try? JSONDecoder().decode([Feed].self, from: data)
+            else { fatalError() }
+
+        self.feeds = feeds
         Router.hit(.unreadEntries, handler: unreadEntriesHandler)
     }
 

@@ -5,6 +5,7 @@ enum Endpoint {
     case unreadEntries
     case starredEntries
     case recentlyReadEntries
+    case subscriptions
 
     var data: Data? {
         return nil
@@ -25,6 +26,8 @@ enum Endpoint {
             return "/v2/starred_entries.json"
         case .recentlyReadEntries:
             return "/v2/recently_read_entries.json"
+        case .subscriptions:
+            return "/v2/subscriptions.json"
         }
     }
 }

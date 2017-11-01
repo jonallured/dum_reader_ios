@@ -2,7 +2,6 @@ import Foundation
 
 struct Entry: Codable {
     let date: Date
-//    var feed: Feed?
     let feedId: Int
     let id: Int
     let title: String
@@ -12,19 +11,9 @@ struct Entry: Codable {
         return DateFormatter.shortDate().string(from: date)
     }
 
-    var feedName: String {
-        return "omg"
-    }
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-
-        self.date = try container.decode(Date.self, forKey: .date)
-        self.feedId = try container.decode(Int.self, forKey: .feedId)
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.title = try container.decode(String.self, forKey: .title)
-        self.url = try container.decode(String.self, forKey: .url)
-    }
+    lazy var feed: Feed = {
+        return EntryStore.shared.feeds.first { $0.id == feedId }!
+    }()
 
     enum CodingKeys: String, CodingKey {
         case date = "published"
