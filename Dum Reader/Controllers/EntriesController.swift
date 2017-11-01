@@ -7,10 +7,8 @@ class EntriesController: UIViewController {
 
     private let refreshControl = UIRefreshControl()
 
-    var entryStore = EntryStore()
-
     var entries: [Entry] {
-        return entryStore.entries
+        return EntryStore.shared.entries
     }
 
     override func viewDidLoad() {
@@ -19,13 +17,13 @@ class EntriesController: UIViewController {
         tableView.dataSource = self
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshStore), for: UIControlEvents.valueChanged)
-        entryStore.delegate = self
-        entryStore.load()
+        EntryStore.shared.delegate = self
+        EntryStore.shared.load()
     }
 
     @objc func refreshStore(_ sender: Any?) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        entryStore.load()
+        EntryStore.shared.load()
     }
 }
 

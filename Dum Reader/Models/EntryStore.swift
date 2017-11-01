@@ -5,6 +5,8 @@ protocol EntryStoreDelegate {
 }
 
 class EntryStore {
+    static let shared = EntryStore()
+
     var delegate: EntryStoreDelegate?
     var entries = [Entry]()
 
