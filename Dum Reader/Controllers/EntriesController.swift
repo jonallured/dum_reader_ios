@@ -5,6 +5,8 @@ class EntriesController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
 
+    private let refreshControl = UIRefreshControl()
+
     var entryStore = EntryStore()
 
     var entries: [Entry] {
@@ -15,14 +17,25 @@ class EntriesController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshStore), for: UIControlEvents.valueChanged)
         entryStore.delegate = self
+        entryStore.load()
+    }
+
+    @objc func refreshStore(_ sender: Any?) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         entryStore.load()
     }
 }
 
 extension EntriesController: EntryStoreDelegate {
     func didLoadEntries() {
-        DispatchQueue.main.async(execute: tableView.reloadData)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }
     }
 }
 
