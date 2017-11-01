@@ -15,13 +15,11 @@
 		FC51FC891F9A9B3B00DBD58F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51FC881F9A9B3B00DBD58F /* Router.swift */; };
 		FC51FC8B1F9A9F3E00DBD58F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51FC8A1F9A9F3E00DBD58F /* Credentials.swift */; };
 		FCA2FED71F97B50400585C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FED61F97B50400585C25 /* AppDelegate.swift */; };
-		FCA2FED91F97B50400585C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FED81F97B50400585C25 /* ViewController.swift */; };
 		FCA2FEDC1F97B50400585C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA2FEDA1F97B50400585C25 /* Main.storyboard */; };
 		FCA2FEDE1F97B50400585C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA2FEDD1F97B50400585C25 /* Assets.xcassets */; };
 		FCA2FEE11F97B50400585C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA2FEDF1F97B50400585C25 /* LaunchScreen.storyboard */; };
 		FCA2FEEC1F97B50400585C25 /* Dum_ReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FEEB1F97B50400585C25 /* Dum_ReaderTests.swift */; };
 		FCA2FEF71F97B50400585C25 /* Dum_ReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FEF61F97B50400585C25 /* Dum_ReaderUITests.swift */; };
-		FCA2FF051F97B8B300585C25 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FF041F97B8B300585C25 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +49,6 @@
 		FC51FC8A1F9A9F3E00DBD58F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		FCA2FED31F97B50400585C25 /* Dum Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dum Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA2FED61F97B50400585C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCA2FED81F97B50400585C25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCA2FEDB1F97B50400585C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCA2FEDD1F97B50400585C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCA2FEE01F97B50400585C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,7 +59,6 @@
 		FCA2FEF21F97B50400585C25 /* Dum ReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dum ReaderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA2FEF61F97B50400585C25 /* Dum_ReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dum_ReaderUITests.swift; sourceTree = "<group>"; };
 		FCA2FEF81F97B50400585C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCA2FF041F97B8B300585C25 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +95,51 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		FC6ED8A31FAA60ED00880246 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC4CC9311F97D9E9006E2957 /* Entry.swift */,
+				FC4CC9331F97DA22006E2957 /* Feed.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC6ED8A41FAA60F400880246 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC4CC92F1F97D55F006E2957 /* EntryCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC6ED8A51FAA60FC00880246 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC4CC92D1F97D313006E2957 /* EntriesController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FC6ED8A61FAA611600880246 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				FCA2FED61F97B50400585C25 /* AppDelegate.swift */,
+				FCA2FEDD1F97B50400585C25 /* Assets.xcassets */,
+				FCA2FEE21F97B50400585C25 /* Info.plist */,
+				FC51FC8A1F9A9F3E00DBD58F /* Credentials.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		FC6ED8A71FAA611B00880246 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FCA2FEDA1F97B50400585C25 /* Main.storyboard */,
+				FCA2FEDF1F97B50400585C25 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		FCA2FECA1F97B50400585C25 = {
 			isa = PBXGroup;
 			children = (
@@ -122,19 +163,12 @@
 		FCA2FED51F97B50400585C25 /* Dum Reader */ = {
 			isa = PBXGroup;
 			children = (
+				FC6ED8A51FAA60FC00880246 /* Controllers */,
+				FC6ED8A61FAA611600880246 /* Misc */,
+				FC6ED8A31FAA60ED00880246 /* Models */,
 				FC51FC851F9A9B2A00DBD58F /* Networking */,
-				FCA2FED61F97B50400585C25 /* AppDelegate.swift */,
-				FCA2FED81F97B50400585C25 /* ViewController.swift */,
-				FCA2FEDA1F97B50400585C25 /* Main.storyboard */,
-				FCA2FEDD1F97B50400585C25 /* Assets.xcassets */,
-				FCA2FEDF1F97B50400585C25 /* LaunchScreen.storyboard */,
-				FCA2FEE21F97B50400585C25 /* Info.plist */,
-				FCA2FF041F97B8B300585C25 /* WebViewController.swift */,
-				FC4CC92D1F97D313006E2957 /* EntriesController.swift */,
-				FC4CC92F1F97D55F006E2957 /* EntryCell.swift */,
-				FC4CC9311F97D9E9006E2957 /* Entry.swift */,
-				FC4CC9331F97DA22006E2957 /* Feed.swift */,
-				FC51FC8A1F9A9F3E00DBD58F /* Credentials.swift */,
+				FC6ED8A71FAA611B00880246 /* Storyboards */,
+				FC6ED8A41FAA60F400880246 /* Views */,
 			);
 			path = "Dum Reader";
 			sourceTree = "<group>";
@@ -298,8 +332,6 @@
 				FC4CC9301F97D55F006E2957 /* EntryCell.swift in Sources */,
 				FC51FC891F9A9B3B00DBD58F /* Router.swift in Sources */,
 				FC4CC9341F97DA22006E2957 /* Feed.swift in Sources */,
-				FCA2FED91F97B50400585C25 /* ViewController.swift in Sources */,
-				FCA2FF051F97B8B300585C25 /* WebViewController.swift in Sources */,
 				FCA2FED71F97B50400585C25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,7 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5F5YW995L7;
-				INFOPLIST_FILE = "Dum Reader/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Dum Reader/Misc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonallured.dum-reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -483,7 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5F5YW995L7;
-				INFOPLIST_FILE = "Dum Reader/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Dum Reader/Misc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonallured.dum-reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";

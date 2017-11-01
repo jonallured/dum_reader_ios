@@ -106,35 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-407" y="121"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Kgh-Ww-mmn">
-            <objects>
-                <viewController id="RKC-J5-Cau" customClass="ViewController" customModule="Dum_Reader" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="q2l-Vi-T39">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afE-r4-KBe">
-                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="RKC-J5-Cau" eventType="touchUpInside" id="wpi-kr-njv"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="afE-r4-KBe" firstAttribute="centerY" secondItem="q2l-Vi-T39" secondAttribute="centerY" id="Bib-qJ-wIS"/>
-                            <constraint firstItem="afE-r4-KBe" firstAttribute="centerX" secondItem="q2l-Vi-T39" secondAttribute="centerX" id="Oqq-HN-Ox5"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="15Y-Sn-Bk1"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aIP-qU-QIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="524" y="53"/>
+            <point key="canvasLocation" x="-401" y="121"/>
         </scene>
     </scenes>
 </document>
