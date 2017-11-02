@@ -11,17 +11,11 @@ enum Endpoint {
     var data: Data? {
         switch self {
         case .createRecentlyReadEntries(let ids):
-            let payload = ["recently_read_entries": ids]
-            let json = try? JSONSerialization.data(withJSONObject: payload, options: .prettyPrinted)
-            return json
+            return serializeIds(key: "recently_read_entries", values: ids)
         case .createStarredEntries(let ids):
-            let payload = ["starred_entries": ids]
-            let json = try? JSONSerialization.data(withJSONObject: payload, options: .prettyPrinted)
-            return json
+            return serializeIds(key: "starred_entries", values: ids)
         case .destroyUnreadEntries(let ids):
-            let payload = ["unread_entries": ids]
-            let json = try? JSONSerialization.data(withJSONObject: payload, options: .prettyPrinted)
-            return json
+            return serializeIds(key: "unread_entries", values: ids)
         default:
             return nil
         }
@@ -52,5 +46,9 @@ enum Endpoint {
         case .subscriptions:
             return "/v2/subscriptions.json"
         }
+    }
+
+    private func serializeIds(key: String, values: [Int]) -> Data? {
+        return try? JSONSerialization.data(withJSONObject: [key: values], options: [])
     }
 }
