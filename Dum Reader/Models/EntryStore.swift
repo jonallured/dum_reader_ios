@@ -16,14 +16,21 @@ class EntryStore {
     }
 
     func save(entry: Entry) {
+        Router.hit(.createStarredEntries(ids: [entry.id]))
+        Router.hit(.destroyUnreadEntries(ids: [entry.id]))
+
         let index = entries.index { $0.id == entry.id }!
         entries.remove(at: index)
         delegate?.didUpdateEntries()
     }
 
     func archive(entry: Entry) {
+        Router.hit(.createRecentlyReadEntries(ids: [entry.id]))
+        Router.hit(.destroyUnreadEntries(ids: [entry.id]))
+
         let index = entries.index { $0.id == entry.id }!
         entries.remove(at: index)
+
         delegate?.didUpdateEntries()
     }
 
