@@ -28,7 +28,7 @@ class EntriesController: UIViewController {
 }
 
 extension EntriesController: EntryStoreDelegate {
-    func didLoadEntries() {
+    func didUpdateEntries() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
             self.refreshControl.endRefreshing()
@@ -38,6 +38,34 @@ extension EntriesController: EntryStoreDelegate {
 }
 
 extension EntriesController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let entry = EntryStore.shared.entries[indexPath.row]
+
+        let action = UIContextualAction(style: .destructive, title: "save") { _, _, completionHandler in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            EntryStore.shared.save(entry: entry)
+            completionHandler(true)
+        }
+
+        action.backgroundColor = UIColor.green
+
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let entry = EntryStore.shared.entries[indexPath.row]
+
+        let action = UIContextualAction(style: .destructive, title: "archive") { _, _, completionHandler in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            EntryStore.shared.archive(entry: entry)
+            completionHandler(true)
+        }
+
+        action.backgroundColor = UIColor.gray
+
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let entry = entries[indexPath.row]
 

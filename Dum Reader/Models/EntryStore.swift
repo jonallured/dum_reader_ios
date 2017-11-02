@@ -1,7 +1,7 @@
 import Foundation
 
 protocol EntryStoreDelegate {
-    func didLoadEntries()
+    func didUpdateEntries()
 }
 
 class EntryStore {
@@ -13,6 +13,18 @@ class EntryStore {
 
     func load() {
         Router.hit(.subscriptions, handler: subscriptionsHandler)
+    }
+
+    func save(entry: Entry) {
+        let index = entries.index { $0.id == entry.id }!
+        entries.remove(at: index)
+        delegate?.didUpdateEntries()
+    }
+
+    func archive(entry: Entry) {
+        let index = entries.index { $0.id == entry.id }!
+        entries.remove(at: index)
+        delegate?.didUpdateEntries()
     }
 
     private func subscriptionsHandler(data: Data?, response: URLResponse?, error: Error?) {
@@ -38,7 +50,7 @@ class EntryStore {
             else { fatalError() }
 
         self.entries = entries
-        delegate?.didLoadEntries()
+        delegate?.didUpdateEntries()
     }
 }
 
