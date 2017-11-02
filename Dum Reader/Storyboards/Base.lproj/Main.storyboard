@@ -78,20 +78,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-iG-Stc">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TdY-jW-XN5">
-                                        <rect key="frame" x="84.5" y="11" width="206" height="29"/>
-                                        <segments>
-                                            <segment title="Unread"/>
-                                            <segment title="Saved"/>
-                                            <segment title="Archived"/>
-                                        </segments>
-                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 unread as of 11/02/07 10:46 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UE-V7-EQx">
+                                        <rect key="frame" x="83" y="17.5" width="209.5" height="16"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="TdY-jW-XN5" firstAttribute="centerY" secondItem="4qe-iG-Stc" secondAttribute="centerY" id="dIV-BN-hbr"/>
+                                    <constraint firstItem="7UE-V7-EQx" firstAttribute="centerX" secondItem="4qe-iG-Stc" secondAttribute="centerX" id="aAk-z3-ktB"/>
                                     <constraint firstAttribute="height" constant="50" id="dih-WA-3ur"/>
-                                    <constraint firstItem="TdY-jW-XN5" firstAttribute="centerX" secondItem="4qe-iG-Stc" secondAttribute="centerX" id="g0y-Oc-vAs"/>
+                                    <constraint firstItem="7UE-V7-EQx" firstAttribute="centerY" secondItem="4qe-iG-Stc" secondAttribute="centerY" id="f8d-kN-KfD"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -108,7 +106,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="segmentControl" destination="TdY-jW-XN5" id="EFM-a9-bDr"/>
+                        <outlet property="statusLabel" destination="7UE-V7-EQx" id="ljW-J7-rbn"/>
                         <outlet property="tableView" destination="SMH-4K-R2t" id="geM-aj-02P"/>
                     </connections>
                 </viewController>

@@ -3,7 +3,7 @@ import SafariServices
 
 class EntriesController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var statusLabel: UILabel!
 
     private let refreshControl = UIRefreshControl()
 
@@ -31,6 +31,9 @@ extension EntriesController: EntryStoreDelegate {
     func didUpdateEntries() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            let count = EntryStore.shared.entries.count
+            let date = Date()
+            self.statusLabel.text = "\(count) unread as of \(date)"
             self.refreshControl.endRefreshing()
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
