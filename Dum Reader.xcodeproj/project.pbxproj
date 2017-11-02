@@ -15,6 +15,7 @@
 		FC51FC871F9A9B3500DBD58F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51FC861F9A9B3500DBD58F /* Endpoint.swift */; };
 		FC51FC891F9A9B3B00DBD58F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51FC881F9A9B3B00DBD58F /* Router.swift */; };
 		FC51FC8B1F9A9F3E00DBD58F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC51FC8A1F9A9F3E00DBD58F /* Credentials.swift */; };
+		FC70106D1FAB789100EC6681 /* StatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70106C1FAB789100EC6681 /* StatusLabel.swift */; };
 		FCA2FED71F97B50400585C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2FED61F97B50400585C25 /* AppDelegate.swift */; };
 		FCA2FEDC1F97B50400585C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA2FEDA1F97B50400585C25 /* Main.storyboard */; };
 		FCA2FEDE1F97B50400585C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA2FEDD1F97B50400585C25 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		FC51FC861F9A9B3500DBD58F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		FC51FC881F9A9B3B00DBD58F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC51FC8A1F9A9F3E00DBD58F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		FC70106C1FAB789100EC6681 /* StatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLabel.swift; sourceTree = "<group>"; };
 		FCA2FED31F97B50400585C25 /* Dum Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dum Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA2FED61F97B50400585C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCA2FEDB1F97B50400585C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				FC4CC92F1F97D55F006E2957 /* EntryCell.swift */,
+				FC70106C1FAB789100EC6681 /* StatusLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				FC0F02951FAA68DE0031F706 /* EntryStore.swift in Sources */,
 				FC4CC92E1F97D313006E2957 /* EntriesController.swift in Sources */,
 				FC51FC8B1F9A9F3E00DBD58F /* Credentials.swift in Sources */,
+				FC70106D1FAB789100EC6681 /* StatusLabel.swift in Sources */,
 				FC51FC871F9A9B3500DBD58F /* Endpoint.swift in Sources */,
 				FC4CC9301F97D55F006E2957 /* EntryCell.swift in Sources */,
 				FC51FC891F9A9B3B00DBD58F /* Router.swift in Sources */,

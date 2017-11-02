@@ -3,7 +3,7 @@ import SafariServices
 
 class EntriesController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var statusLabel: StatusLabel!
 
     private let refreshControl = UIRefreshControl()
 
@@ -23,6 +23,7 @@ class EntriesController: UIViewController {
 
     @objc func refreshStore(_ sender: Any?) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        statusLabel.count = nil
         EntryStore.shared.load()
     }
 }
@@ -31,9 +32,7 @@ extension EntriesController: EntryStoreDelegate {
     func didUpdateEntries() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
-            let count = EntryStore.shared.entries.count
-            let date = Date()
-            self.statusLabel.text = "\(count) unread as of \(date)"
+            self.statusLabel.count = EntryStore.shared.entries.count
             self.refreshControl.endRefreshing()
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
