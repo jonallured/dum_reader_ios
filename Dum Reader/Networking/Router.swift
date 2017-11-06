@@ -16,7 +16,6 @@ struct Router {
         let authString = "Basic \(encodedCredentials)"
         request.addValue(authString, forHTTPHeaderField: "Authorization")
 
-        // might not need this?
         if let data = endpoint.data {
             request.httpBody = data
         }
